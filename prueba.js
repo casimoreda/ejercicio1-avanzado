@@ -1,4 +1,9 @@
-function saludo() {
-    console.log("Hola, soy un mensaje de prueba");
-    console.log("Hola Mundo desde AppScript")
+function doGet() {
+  const html = HtmlService.createTemplateFromFile('html y css/web');
+  const output = html.evaluate();
+  return output
+}
+
+function include(fileName) {
+  return HtmlService.createHtmlOutputFromFile(fileName).getContent()
 }
